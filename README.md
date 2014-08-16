@@ -1,4 +1,4 @@
-# controller plugin for ZF1 for transaction naming
+# ZF1 Qafoo Profiler
 
 This plugin ensures sensible names are send to the Qafoo Profiler.
 
