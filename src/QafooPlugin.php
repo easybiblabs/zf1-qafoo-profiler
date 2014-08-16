@@ -21,15 +21,14 @@ class QafooPlugin extends \Zend_Controller_Plugin_Abstract
     {
         $name = \Zend_Controller_Front::getInstance()->getRouter()->getCurrentRouteName();
         if ($name != 'default') {
-            return $name;
+            return "{$name} (route)";
         }
 
-        $module = $request->getModuleName();
-        $controller = $request->getControllerName();
-        $action = $request->getActioName();
+        $module = ucfirst($request->getModuleName());
+        $controller = ucfirst($request->getControllerName());
+        $action = $request->getActionName();
 
-        $name = "{$module}_{$controller}::{$action}";
-
+        $name = "{$module}_{$controller}Controller::{$action}Action";
         return $name;
     }
 }
