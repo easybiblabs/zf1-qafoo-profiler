@@ -1,0 +1,19 @@
+{
+    "name": "easybib/zf1-qafoo-profiler",
+    "description": "Easy tagging of transactions and traces",
+    "require": {
+        "qafoolabs/profiler": "@stable"
+    },
+    "license": "BSD-2-Clause",
+    "authors": [
+        {
+            "name": "till",
+            "email": "till@php.net"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "EasyBib\\Zf1\\Controller\\Plugin\\": "src/"
+        }
+    }
+}
