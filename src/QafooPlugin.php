@@ -28,7 +28,11 @@ class QafooPlugin extends \Zend_Controller_Plugin_Abstract
         $controller = ucfirst($request->getControllerName());
         $action = $request->getActionName();
 
-        $name = "{$module}_{$controller}Controller::{$action}Action";
+        $name = "{$controller}Controller::{$action}Action";
+        if ('Default' != $module) {
+            $name = "{$module}_{$name}";
+        }
+
         return $name;
     }
 }
