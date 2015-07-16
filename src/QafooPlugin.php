@@ -2,16 +2,22 @@
 
 namespace EasyBib\Zf1\Controller\Plugin;
 
-use QafooLabs\Profiler;
-
 class QafooPlugin extends \Zend_Controller_Plugin_Abstract
 {
     public function routeShutdown(\Zend_Controller_Request_Abstract $request)
     {
+        if (!class_exists('Tideways\Profiler')) {
+            return;
+        }
+
+        if (ini_get('tideways.framework')) {
+            return;
+        }
+
         $name = $this->createTransactionName($request);
         $method = $request->getMethod();
 
-        Profiler::setTransactionName("{$method} {$name}");
+        \Tideways\Profiler::setTransactionName("{$method} {$name}");
     }
 
     /**

@@ -1,9 +1,6 @@
 {
     "name": "easybib/zf1-qafoo-profiler",
     "description": "Easy tagging of transactions and traces",
-    "require": {
-        "qafoolabs/profiler": "@stable"
-    },
     "license": "BSD-2-Clause",
     "authors": [
         {
@@ -15,5 +12,8 @@
         "psr-4": {
             "EasyBib\\Zf1\\Controller\\Plugin\\": "src/"
         }
+    },
+    "suggest": {
+        "ext-tideways": "You should install ext/tideways: https://github.com/tideways/php-profiler-extension"
     }
 }
