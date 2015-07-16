@@ -10,6 +10,10 @@ class QafooPlugin extends \Zend_Controller_Plugin_Abstract
             return;
         }
 
+        if (ini_get('tideways.framework')) {
+            return;
+        }
+
         $name = $this->createTransactionName($request);
         $method = $request->getMethod();
 
