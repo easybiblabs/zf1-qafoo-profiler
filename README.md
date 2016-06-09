@@ -4,4 +4,4 @@ This plugin ensures sensible names are send to the Qafoo Profiler.
 
 Enables better tagging and sorting through transactions and traces.
 
-License: BSD-2-Clause
+License: Apache-2.0

@@ -1,7 +1,7 @@
 {
     "name": "easybib/zf1-qafoo-profiler",
     "description": "Easy tagging of transactions and traces",
-    "license": "BSD-2-Clause",
+    "license": "Apache-2.0",
     "authors": [
         {
             "name": "till",
